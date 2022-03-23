@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="summaryContainer" fxLayout="row wrap" fxLayoutGap="10px">
+  
+  <div class="card" fxFlex="31%" fxFlex.sm="48%"  fxFlex.xs="100%" *ngFor="let data of data">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <p class="card-text">{{data.title}}</p>
+    </div>
+  </div>
+</div>
+<div>
+</div>
+<div class="loader"><mat-progress-spinner [mode]="'indeterminate'" *ngIf="loading$ | async"></mat-progress-spinner></div>
+<app-footer></app-footer>
