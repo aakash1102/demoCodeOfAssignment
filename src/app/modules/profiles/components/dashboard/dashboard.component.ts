@@ -16,6 +16,9 @@ import { LoadingService } from 'src/app/services/loading.service';
 export class DashboardComponent implements OnInit {
 
   loading$ = this.loader.loading$;
+  show = this.loader.show();
+  hide =this.loader.hide();
+
 
   users:any;
   searchValue: string ='';

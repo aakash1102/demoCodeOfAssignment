@@ -2,8 +2,17 @@
     background: #ffffff;
 }
 .main{
+    display: flex;
+    align-items: center;
     padding-top: 16px;
 }
+@media only screen and (max-width: 600px) {
+    .main {
+        display: contents;
+        align-items: center;
+    }
+    }
+
 .example-card {
     max-width: 400px;
     margin: 10px;
@@ -22,10 +31,18 @@
     padding: 16px;
     border-radius: 4px;
 }
+.part{
+    display: flex;
+}
+.mat-card-title-group {
+    display: contents;
+    justify-content: space-between;
+}
 .part1{
     width: 35%;
 }
 .part2{
+    margin-left: 20px;
     width: 65%;
 }
 .form-controls{
@@ -34,14 +51,20 @@
 }
 
 .mainHeading{
-    margin-left: 25px;
+    margin-left: 10px;
     display: inline;
+    border: outset;
 }
 
-.main{
-    display: flex;
-    align-items: center;
-}
+@media only screen and (max-width: 600px) {
+    .mainHeading {
+        display: flex;
+        margin: auto;
+        max-width: max-content;}
+    }
+    
+
+
 
 .form-controls{
     margin-left: auto;
@@ -60,7 +83,15 @@ body{
   position: relative;
   display: flex;
   width: 350px;
-    margin-right: 40px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+.searches{
+position: relative;
+display: flex;
+width: 100%;
+}
 }
 
 .searchT {
@@ -107,14 +138,76 @@ mat-progress-spinner{
     position: absolute;
     top:  50%;
     left: 50%;
+    ;
     transform: translate(-50%, -50%);
-    z-index: 5;
+   
 }
 
 .loader{
-    z-index: -5;
-    height: 70vh;
+    position: relative;
+    z-index: 5;
+    height: 250px;
     width: 100%;
+    
 }
+
+.unloader{
+    display: none;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+    padding: 10px;
+    gap: 20px 22px;
+  }
+  @media only screen and (max-width: 1020px){
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    
+    padding: 10px;
+    gap: 20px 22px;
+  }
+}
+@media only screen and (max-width: 595px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        
+        padding: 10px;
+        gap: 20px 22px;
+      }
+    }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 7px outset #5cb7ff;
+    background-color: #5cb7ff;
+    
+    display: flex;
+    
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    height: 176px;
+}
+
+
+
+.btn-primary {
+    color: #ffffff;
+    border-color: #001eff;
+    background-color: #1fafd0;
+    border: 3px outset #34ddd4;
+}
+
+
+
+
+
+
+
 
 

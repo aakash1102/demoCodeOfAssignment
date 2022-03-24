@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { User } from '../interfaces/user';
 
 
 
@@ -12,7 +13,11 @@ export class FilterPipe implements PipeTransform {
     if(users.length===0 || searchValue===''){
       return users;
     }
-    
+    return users.filter((user:User) => {
+      return(user.name.toLowerCase().match(searchValue.toLowerCase()) ||
+      user.email.toLowerCase().match(searchValue.toLowerCase()) ||
+      user.company.toLowerCase().match(searchValue.toLowerCase()));
+    });
     }
   }
 

@@ -4,5 +4,6 @@ export interface User {
     username:string,
     email:string,
     company:string,
-    phone:Number
+    phone:Number,
+    user:[]
 }

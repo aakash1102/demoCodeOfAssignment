@@ -1,30 +1,37 @@
-/* .container{
-    display: table;
-    margin: auto;
-    margin: 100px;
-}
-.login-box{
-    
-}
-.logo-caption{
-    text-align: center;
-}
-.table1{
-    display: table;
-    margin: auto;
-} */
+
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
     width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
+    
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
+
+  @media only screen and (max-width: 595px){
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+  }
+
+  
   label{
       width: 25%;
+  }
+
+  @media only screen and (max-width: 595px){
+    label{
+      width: 100%;
+  }
+
   }
   
   /* Set a style for all buttons */
@@ -36,6 +43,18 @@ input[type=text], input[type=password] {
     border: none;
     cursor: pointer;
     width: 25%;
+  }
+
+  @media only screen and (max-width: 595px){
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      margin: auto;
+      cursor: pointer;
+      width: 100px;
+    }
   }
   
   button:hover {
@@ -54,6 +73,14 @@ input[type=text], input[type=password] {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
+  }
+
+  @media only screen and (max-width: 595px){
+    .imgcontainer {
+      text-align: center;
+    margin: auto;
+    position: relative;
+    }
   }
   
   /* img.avatar {
