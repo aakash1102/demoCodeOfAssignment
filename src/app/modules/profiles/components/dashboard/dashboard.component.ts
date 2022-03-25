@@ -6,6 +6,7 @@ import { LoadingService } from 'src/app/services/loading.service';
 
 
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -20,17 +21,17 @@ export class DashboardComponent implements OnInit {
   hide =this.loader.hide();
 
 
-  users:any;
+  users:any
   searchValue: string ='';
   constructor(private usersService: UsersService,
-    public loader: LoadingService){}
+              public loader: LoadingService){}
  
   
 
   ngOnInit(): void {
     this.users = this.usersService.getUsers().subscribe(data=>{
       this.users = data;
-      
+      console.log((this.users))
     });
   }
 

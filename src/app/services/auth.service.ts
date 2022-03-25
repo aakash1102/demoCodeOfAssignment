@@ -26,11 +26,11 @@ export class AuthService {
     this.router.navigate(['login']);
   }
 
-  login({ password }: any): Observable<any> {
+  login({ password }: any) {
     if ( password === 'pass@123') {
       this.setToken('abcdefghijklmnopqrstuvwxyzff');
       return of({ password: 'pass@123', email: 'admin@gmail.com' });
     }
-    return throwError(Error('Failed to login'));
+    return throwError(()=>new Error('Failed to login'));
   }
 }

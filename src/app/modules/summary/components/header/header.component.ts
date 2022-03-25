@@ -25,6 +25,7 @@ export class HeaderComponent implements OnInit {
   getOneUser(){
     this.usersService.getOneUser(this.id).subscribe(oneUser=>{
       this.oneUser=oneUser;
+      console.log(this.id)
       console.log(this.oneUser)
     })
   }
